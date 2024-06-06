@@ -1,0 +1,35 @@
+print order :-   1 , 7 , 3 , 5 , 2 , 6 , 4 
+first line print the 1 
+after that second line execut and push to macro task queue
+In thierd line promise resolve the same time so it's then function push to microtask queue
+In forth line promise resolve the same time so it's then function push to microtask queue
+In fifth line promise resolve the same time so it's then function push to microtask queue
+after that sixth line execut and push to macro task queue
+seventh line print the 7 
+
+
+now microtask gose to execution stack because it has more priority the macro task
+
+microtask position :- () => console.log(3)
+() => setTimeout(() => console.log(4))
+(() => console.log(5))
+
+now first first position function gose to call stack 
+and it console 3 
+now second position function gose  to call  stack and setTimeout gose to macro queue
+now thierd position function gose to call stack and console 5 
+
+
+macro position :- () => console.log(2)
+                  () => console.log(6)
+                  () => console.log(4)
+
+now first first position function gose to call stack 
+and it console 2 
+now first second position function gose to call stack 
+and it console 6
+now first thierd position function gose to call stack 
+and it console 4 
+
+
+
